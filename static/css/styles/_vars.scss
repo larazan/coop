@@ -1,0 +1,55 @@
+// Custom media queries
+// 320px
+$mq-xsmall: 20rem;
+// 480px
+$mq-small: 30rem;
+// 750px
+$mq-medium: 46.875rem;
+// 960px
+$mq-large: 60rem;
+// 1300px
+$mq-xlarge: 81.25rem;
+
+// Background colours
+$bg-light: #fff;
+$bg-alt: #f2f4f7;
+
+// opinionated padding based on designs
+$side-padding: 1.25rem;
+
+:root {
+  // Typography
+  --font-size: 1rem;
+  --font-size--small: 0.875rem;
+  --line-height: 1.5;
+  --line-height--header: 1.4;
+  --spacing-list: 1.875rem;
+
+  --type-size--f1: 1.875rem;
+  --type-size--f2: 1.25rem;
+  --type-size--f3: 1.125rem;
+  --type-size--f4: 1rem;
+  --type-size--f5: 0.875rem;
+  --type-size--f6: 0.75rem;
+
+  // Spacing
+  --magic-spacing: calc(var(--font-size) + var(--spacing-base--1-8));
+  --app-header-height: 8rem;
+
+  // Border radius
+  --border-radius: 4px;
+
+  // Box shadow
+  --box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 1px;
+
+  // Colours
+  --color-bg: #fff;
+  --color-invalid: #d63118;
+
+  // Custom colours
+  --color-linen: #faebeb;
+  --color-alt-grey: #f2f4f7;
+
+  --btn-cta-color-disabled: #7f9ca7;
+  --btn-add-to-basket-color-disabled: #b5b5b5;
+}

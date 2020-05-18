@@ -1,0 +1,51 @@
+%product-promo {
+  display: flex;
+  width: 100%;
+  font-size: var(--font-size--small);
+  color: var(--color-grey-dark);
+  line-height: 1.4;
+}
+
+.product-promo {
+  @extend %product-promo;
+  background-color: var(--color-grey-light);
+  padding-top: calc(1.5 * var(--spacing-base--1-4));
+  padding-bottom: calc(1.5 * var(--spacing-base--1-4));
+  padding-left: calc(1.5 * var(--spacing-base--1-4));
+  padding-right: calc(1.5 * var(--spacing-base--1-4));
+}
+
+.product-promo--card {
+  @extend %product-promo;
+  border-top: solid 1px var(--color-grey-light);
+  border-bottom: solid 1px var(--color-grey-light);
+  padding-top: var(--spacing-base--1-4);
+  padding-bottom: var(--spacing-base--1-4);
+  padding-left: var(--spacing-base--1-4);
+  padding-right: var(--spacing-base--1-4);
+
+  .product-promo--squircle {
+    margin-right: var(--spacing-base--1-4);
+  }
+}
+
+.product-promo--details {
+  @extend %product-promo;
+  display: block;
+}
+
+.product-promo--squircle {
+  display: block;
+  padding-top: 0.125rem;
+  margin-right: calc(1.5 * var(--spacing-base--1-4));
+}
+
+.product-promo--name {
+  display: block;
+  color: var(--color-red-mid);
+  font-weight: 600;
+}
+
+.product-promo--expiry {
+  display: block;
+}

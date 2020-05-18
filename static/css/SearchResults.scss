@@ -1,0 +1,21 @@
+.search-results {
+  .container {
+    padding-left: var(--magic-spacing);
+    padding-right: var(--magic-spacing);
+  }
+
+  &--items {
+    padding-bottom: var(--spacing-base--1-2);
+  }
+
+  &--default,
+  &--no-results {
+    padding-top: var(--spacing-base--1-4);
+    padding-bottom: var(--spacing-base--1-2);
+  }
+
+  &--categories {
+    padding-top: var(--spacing-base--1-4);
+    padding-bottom: 0;
+  }
+}

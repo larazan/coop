@@ -1,0 +1,77 @@
+.hero {
+  --vspace: calc(1.5 * var(--spacing-base--1-4));
+  --title-size: calc(
+    ((var(--type-size--f1) * var(--line-height--header)) + (var(--vspace) * 2)) / 2
+  );
+
+  background-color: var(--color-bg);
+
+  &__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    min-height: 8rem;
+  }
+
+  &__title {
+    margin: 0;
+    margin-top: calc(var(--title-size) * -1);
+
+    span {
+      display: inline-block;
+      padding-left: var(--magic-spacing);
+      padding-right: var(--magic-spacing);
+      padding-top: var(--vspace);
+      padding-bottom: var(--vspace);
+      background-color: var(--color-bg-contrast);
+    }
+  }
+
+  &__content {
+    padding: 1.2rem;
+  }
+
+  &__checklist {
+    font-size: var(--font-size);
+    color: var(--color-link);
+
+    ul {
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      list-style: none;
+    }
+
+    li {
+      margin-top: var(--spacing-base--1-4);
+      margin-bottom: var(--spacing-base--1-4);
+
+      &::before {
+        display: inline-block;
+        content: '';
+        height: var(--magic-spacing);
+        width: var(--magic-spacing);
+        background-image: url('../../assets/icons/checkmark-fill.svg');
+        background-position-x: left;
+        background-position-y: center;
+        background-size: var(--magic-spacing);
+        margin-right: var(--spacing-base--1-4);
+        vertical-align: text-bottom;
+      }
+    }
+
+    // Apply spacing below
+    & + div {
+      margin-top: var(--spacing-base--1-2);
+    }
+  }
+
+  &__cta {
+    padding-left: calc(20px + var(--spacing-base--1-4));
+    margin-top: 0;
+
+    a {
+      color: var(--color-link);
+    }
+  }
+}

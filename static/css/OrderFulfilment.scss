@@ -1,0 +1,74 @@
+@import '../../styles/mixins';
+
+.address-lookup {
+  margin-bottom: var(--spacing-base--1-2);
+}
+
+.card-list {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  list-style: none;
+}
+
+.options-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-top: var(--magic-spacing);
+  margin-bottom: var(--magic-spacing);
+
+  &--row {
+    margin: 0;
+    display: block;
+    width: 100%;
+    appearance: none;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 0;
+    margin-bottom: 1px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: var(--spacing-base--1-2);
+    padding-right: var(--spacing-base--1-2);
+    font-size: var(--font-size--small);
+    line-height: 1.4;
+    cursor: default;
+    text-align: left;
+
+    &:first-child {
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+  }
+}
+
+.address-input {
+  &.form-item {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .form-input {
+    text-transform: uppercase;
+    height: 100%;
+  }
+
+  .form-item-search--button {
+    max-width: 8rem;
+  }
+}
+
+.address-error {
+  &--title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}

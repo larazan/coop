@@ -1,0 +1,117 @@
+.btn {
+    display: inline-block;
+    line-height: 40px;
+    height: 40px;
+    padding: var(--spacing-base--1-4) var(--spacing-base--1-2);
+    font-size: var(--font-size);
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5;
+    vertical-align: bottom;
+    border: 0;
+    border-radius: var(--border-radius);
+    appearance: none;
+    background-color: var(--color-grey-light);
+    text-decoration: none;
+  
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--color-grey-mid);
+    }
+  
+    &:disabled {
+      background-color: var(--btn-cta-color-disabled);
+      color: var(--color-white);
+  
+      .btn__icon {
+        display: none;
+      }
+  
+      &:hover,
+      &:focus {
+        background-color: var(--btn-cta-color-disabled);
+        color: var(--color-white);
+      }
+    }
+  
+    svg {
+      vertical-align: bottom;
+      display: inline-block;
+      fill: var(--color-white);
+    }
+  
+    @media (max-width: $mq-xsmall) {
+      font-size: 0.875rem;
+    }
+  
+    &--primary {
+      background-color: var(--color-button-primary);
+      color: var(--color-white);
+  
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: var(--color-button-primary--hover);
+        color: var(--color-white);
+      }
+    }
+  
+    &--secondary {
+      background-color: var(--color-button-dark);
+      color: var(--color-white);
+  
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: var(--color-button-dark--hover);
+        color: var(--color-white);
+      }
+    }
+  
+    &--full {
+      width: 100%;
+    }
+  
+    &--icon {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      text-align: left;
+      font-size: var(--font-size--small);
+      line-height: 1.7;
+      padding: var(--spacing-base--1-4);
+    }
+  
+    &--add-to-basket {
+      border-top-left-radius: none;
+      border-top-right-radius: none;
+  
+      &:disabled {
+        background-color: var(--btn-add-to-basket-color-disabled);
+  
+        .btn__icon {
+          display: inline-block;
+        }
+  
+        &:hover,
+        &:focus {
+          background-color: var(--btn-add-to-basket-color-disabled);
+        }
+      }
+    }
+  }
+  
+  .btn-neg {
+    background-color: transparent;
+    color: var(--color-red-dark);
+    box-shadow: none;
+  
+    &:hover,
+    &:focus {
+      background-color: var(--color-red-dark);
+      color: var(--color-white);
+    }
+  }
+  

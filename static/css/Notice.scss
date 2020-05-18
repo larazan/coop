@@ -1,0 +1,58 @@
+[data-theme='notice-default'] {
+  --color-bg: #fee671;
+  --color-text: var(--color-text);
+}
+
+[data-theme='notice-low'] {
+  --color-bg: #fff5d0;
+  --color-icon: #f7b500;
+  --color-text: #282828;
+}
+
+.notice {
+  color: var(--color-text);
+  font-size: var(--font-size--small);
+  background-color: var(--color-bg);
+
+  &__wrapper {
+    display: flex;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    line-height: 1.5;
+  }
+
+  &--icon {
+    margin-left: var(--spacing-base--1-4);
+    margin-right: var(--spacing-base--1-4);
+
+    svg {
+      fill: var(--color-icon);
+    }
+  }
+
+  &--message {
+    padding-left: var(--spacing-base--1-2);
+    padding-right: var(--spacing-base--1-2);
+  }
+
+  &--icon + &--message {
+    padding-left: 0;
+  }
+
+  &--sticky {
+    bottom: 0;
+    left: 0;
+    position: sticky;
+    width: 100%;
+    z-index: 3;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}

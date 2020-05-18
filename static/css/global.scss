@@ -1,0 +1,90 @@
+// Import global CSS variables
+@import '@coopdigital/foundations-vars';
+@import './styles/vars';
+@import './styles/themes';
+@import './styles/mixins';
+
+// Utilities
+@import './styles/utilities';
+
+// Typography
+@import './styles/fonts';
+@import './styles/typography';
+
+@import './styles/forms';
+@import './styles/buttons';
+
+// Overrides
+.default-grid {
+  @include grid;
+}
+
+.container {
+  @include container;
+
+  &--padded {
+    padding: var(--spacing-base--1-2);
+  }
+
+  &--padded-magic {
+    padding: var(--magic-spacing);
+
+    & + .container--padded-magic {
+      padding-top: 0;
+    }
+  }
+
+  &--narrow {
+    max-width: 34em;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $mq-small) {
+      max-width: $mq-small;
+    }
+  }
+}
+
+.wrapper--dark {
+  background-color: #f2f4f7;
+}
+
+// App global styles
+
+.app-root {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-height: 100vh;
+}
+
+.content-section {
+  &--grow {
+    flex-grow: 1;
+  }
+}
+
+.section-title {
+  margin-bottom: var(--spacing-base--1-4);
+  margin-top: var(--magic-spacing);
+}
+
+/* Forms */
+.authentication--content {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.page-title {
+  font-size: 1.875rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+
+  @media screen and (min-width: $mq-medium) {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+}

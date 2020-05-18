@@ -1,0 +1,22 @@
+.supplier-banner {
+  margin: 0;
+  padding: var(--spacing-base--1-4);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+}
+
+.supplier-banner__media {
+  display: block;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.supplier-banner__caption {
+  position: absolute;
+  visibility: hidden;
+  > p {
+    margin: 0;
+  }
+}

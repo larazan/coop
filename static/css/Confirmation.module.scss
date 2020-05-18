@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  width: 100%;
+  font-size: var(--font-size);
+  color: var(--color-text);
+  background-color: #dde9ed; // FIXME variable or no?
+
+  padding-left: calc(1.5 * var(--spacing-base--1-4));
+  padding-top: var(--spacing-base--1-4);
+  padding-bottom: var(--spacing-base--1-4);
+
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+}
+
+.checkmark {
+  box-sizing: border-box;
+  height: 20px;
+  min-width: 26px;
+  padding-top: 0.125rem;
+  padding-right: var(--spacing-base--1-4);
+}

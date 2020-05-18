@@ -1,0 +1,105 @@
+.app-menu--container {
+  --app-navbar-offset: calc(
+    var(--spacing-base) + var(--spacing-base--1-2) + var(--spacing-base--1-4)
+  );
+
+  position: fixed;
+  z-index: 100;
+  // Ensure the container stretches to full height all the time on iOS (cannot use vh here)
+  // Setting top: --app-navbar-offset introduces a bug in iOS 12,
+  // so stretch this to the full height available and introduce the
+  // top margin in .app-menu below
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.app-menu__close {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.app-menu {
+  position: relative;
+  z-index: 2;
+  padding-right: 1rem;
+  height: calc(100% - var(--app-navbar-offset));
+  margin-top: var(--app-navbar-offset);
+  background-color: var(--color-white);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.app-menu--item {
+  padding-left: 1rem;
+
+  &[aria-expanded='true'] {
+    background-color: #3e71af;
+
+    .app-menu--item {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .app-menu--link {
+      padding-left: 1rem;
+      background-color: var(--color-white);
+      color: var(--color-text);
+    }
+
+    > .app-menu--link {
+      padding-left: 0;
+      color: var(--color-white);
+      background-color: #3e71af;
+
+      .app-menu--link-icon {
+        fill: var(--color-white);
+      }
+    }
+  }
+}
+
+.app-menu--link {
+  display: flex;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+  font-size: var(--font-size);
+  font-weight: 500;
+  color: var(--color-text);
+  border: 0;
+  border-bottom: 1px solid var(--color-grey-mid);
+
+  &:hover {
+    border-bottom: 1px solid var(--color-grey-mid);
+  }
+
+  &-label {
+    flex: 1 0 0;
+  }
+}
+
+// Override font-weight for view all link (first in stack)
+.app-menu--subcategories {
+  .app-menu--item {
+    &:last-child {
+      .app-menu--link {
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import '../../styles/vars';
+
+.category {
+  &-list {
+    padding-bottom: var(--spacing-base--1-2);
+  }
+}
+
+.category--header {
+  max-width: 34rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $mq-large) {
+    max-width: $mq-large;
+  }
+
+  padding-left: var(--magic-spacing);
+  padding-right: var(--magic-spacing);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}

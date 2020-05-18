@@ -1,0 +1,33 @@
+@import '../../styles/mixins';
+
+.category-list {
+  @include container;
+  @include side-padding-lg;
+  @include grid;
+
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+
+  .category-list--item {
+    display: flex;
+    flex: 1 0 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    /* We currently inherit this component from the
+       @coopdigital/component-signpost */
+
+    .coop-c-signpost {
+      padding-top: var(--spacing-base--1-4);
+      padding-bottom: var(--spacing-base--1-4);
+      margin-bottom: var(--spacing-base--1-8);
+      margin-top: var(--spacing-base--1-8);
+    }
+
+    /* stylelint-disable-next-line selector-class-pattern */
+    .coop-c-signpost__title {
+      font-size: var(--font-size);
+    }
+  }
+}

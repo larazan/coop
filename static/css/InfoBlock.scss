@@ -1,0 +1,71 @@
+.infoblock,
+.infoblock-click,
+.infoblock-edit {
+  display: block;
+  width: 100%;
+  text-align: initial;
+  border: 0;
+  position: relative;
+  background-color: var(--color-white);
+  padding: 0.75rem 1.25rem;
+  color: var(--color-black);
+  font-size: var(--font-size);
+  text-decoration: none;
+
+  &--label {
+    display: block;
+    font-weight: 400;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.25;
+  }
+
+  &--content {
+    display: block;
+    font-weight: 500;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.25;
+  }
+}
+
+.infoblock-click {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+
+  &::after {
+    display: block;
+    position: absolute;
+    right: 0.5rem;
+    top: calc(50% - 0.75rem);
+    width: 1.5rem;
+    height: 1.5rem;
+    content: '';
+    font-size: 0.75rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-grey-dark);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNoZXZyb25fc21hbGxfcmlnaHQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiDQoJIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGQ9Ik0xMSwxMEw3Ljg1OSw2LjU4Yy0wLjI2OC0wLjI3LTAuMjY4LTAuNzA3LDAtMC45NzhjMC4yNjgtMC4yNywwLjcwMS0wLjI3LDAuOTY5LDBsMy44MywzLjkwOA0KCWMwLjI2OCwwLjI3MSwwLjI2OCwwLjcwOSwwLDAuOTc5bC0zLjgzLDMuOTA4Yy0wLjI2NywwLjI3Mi0wLjcwMSwwLjI3LTAuOTY5LDBjLTAuMjY4LTAuMjY5LTAuMjY4LTAuNzA3LDAtMC45NzhMMTEsMTB6Ii8+DQo8L3N2Zz4NCg==');
+  }
+
+  > .infoblock--content {
+    padding-right: 1rem;
+  }
+}
+
+.infoblock-edit {
+  .infoblock--cta {
+    color: var(--color-link);
+    text-decoration: underline;
+    font-size: var(--font-size--small);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  > .infoblock--content {
+    padding-right: 2.5rem;
+  }
+}

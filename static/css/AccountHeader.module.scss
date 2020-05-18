@@ -1,0 +1,27 @@
+.container {
+  background: #eee;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 40px;
+  padding-left: var(--magic-spacing);
+  padding-right: var(--magic-spacing);
+}
+
+.button {
+  background: none;
+  border: none;
+  color: var(--color-text-contrast);
+  font-weight: 500;
+  padding: 0;
+  line-height: 2.5rem;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

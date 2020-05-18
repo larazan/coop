@@ -1,0 +1,36 @@
+@import '../../styles/vars';
+
+.error-page {
+  max-width: 34rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $mq-large) {
+    max-width: $mq-large;
+  }
+
+  &--header {
+    padding-left: $side-padding;
+    padding-right: $side-padding;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    min-height: 24rem;
+  }
+
+  &--title {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.875rem;
+  }
+
+  &--message {
+    line-height: 1.5;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &--action {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}

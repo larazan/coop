@@ -1,0 +1,20 @@
+.category-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  button.pill {
+    margin-top: var(--spacing-base--1-4);
+    display: block;
+  }
+
+  .pill {
+    display: inline-block;
+    margin-right: var(--spacing-base--1-4);
+    margin-bottom: var(--spacing-base--1-2);
+  }
+}
+
+.category-links__title {
+  margin-top: 0;
+  margin-bottom: var(--spacing-base--1-2);
+}

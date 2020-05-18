@@ -1,0 +1,30 @@
+.page-error {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: calc(70vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 32em;
+}
+
+.page-error--title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.page-error--content {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.page-error--footer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

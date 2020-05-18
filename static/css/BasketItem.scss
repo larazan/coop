@@ -1,0 +1,114 @@
+.basket-item {
+  display: flex;
+  background-color: var(--color-white);
+  margin-bottom: var(--spacing-base--1-2);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: var(--text-color);
+  }
+}
+
+.basket-item--image {
+  padding: var(--spacing-base--1-2);
+
+  .product-photo {
+    img {
+      display: block;
+      max-width: calc(2 * var(--spacing-base));
+
+      @media (min-width: 60em) {
+        max-width: calc(3 * var(--spacing-base));
+      }
+    }
+  }
+}
+
+.basket-item--info {
+  padding-top: var(--spacing-base--1-2);
+  padding-bottom: var(--spacing-base--1-2);
+  padding-right: var(--spacing-base--1-2);
+  flex: 1 1 0;
+
+  @media (min-width: 60em) {
+    display: flex;
+  }
+}
+
+.basket-item--name {
+  flex: 1 1 0;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: var(--spacing-base--1-8);
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.basket-item--label {
+  font-size: var(--font-size--small);
+  color: var(--color-grey-dark);
+  margin-top: var(--spacing-base--1-8);
+  margin-bottom: var(--spacing-base--1-8);
+}
+
+.basket-item--totals {
+  flex: 1 0 0;
+  margin-top: var(--spacing-base--1-4);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .quantity-controls {
+    margin-left: var(--spacing-base);
+    box-shadow: none;
+  }
+
+  .quantity-display {
+    flex: 0 0 auto;
+    font-size: var(--type-size--f4);
+    padding-left: 0;
+  }
+
+  .quantity-buttons {
+    align-items: center;
+    margin-left: var(--spacing-base--1-4);
+    flex: 0.4 0;
+  }
+
+  .quantity-btn {
+    width: 2rem;
+    height: 2rem;
+
+    &:last-child {
+      margin-left: var(--spacing-base--1-4);
+    }
+
+    &:disabled {
+      background-color: var(--btn-add-to-basket-color-disabled);
+    }
+  }
+
+  .basket-item--price {
+    font-size: var(--type-size--f4);
+    font-weight: 700;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: 60em) {
+    margin-top: 0;
+    justify-content: end;
+    flex-direction: row-reverse;
+
+    .basket-item--price {
+      margin-left: var(--spacing-base);
+    }
+  }
+}

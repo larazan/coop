@@ -1,0 +1,31 @@
+.checkout {
+  .container {
+    padding-left: var(--magic-spacing);
+    padding-right: var(--magic-spacing);
+
+    &--alt {
+      padding-top: var(--spacing-base--1-4);
+      padding-bottom: var(--spacing-base--1-8);
+    }
+  }
+
+  .page--header {
+    margin-top: 0;
+  }
+
+  .order-slot {
+    margin-top: var(--spacing-base--1-2);
+    margin-bottom: var(--magic-spacing);
+  }
+
+  .section-title {
+    margin-bottom: var(--spacing-base--1-8);
+    margin-top: calc(1.5 * var(--spacing-base--1-2));
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .section-title + .basket--summary {
+    margin-top: var(--spacing-base--1-4);
+  }
+}

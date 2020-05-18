@@ -1,0 +1,79 @@
+// Themes
+[data-theme] {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+  
+  [data-theme='light'] {
+    --color-bg: #fff;
+    --color-bg-contrast: var(--color-grey-light);
+    --color-bg-contrast-low: var(--color-grey-light);
+    --color-text: #282828;
+    --color-text-contrast: #282828;
+  }
+  
+  [data-theme='alternate'] {
+    --color-bg: var(--color-grey-light);
+    --color-bg-contrast: var(--color-white);
+    --color-bg-contrast-low: var(--color-white);
+    --color-text: #282828;
+    --color-text-contrast: #282828;
+  }
+  
+  [data-theme='default'] {
+    --color-bg: var(--color-alt-grey);
+    --color-bg-contrast: var(--color-white);
+    --color-text: var(--color-text);
+    --color-text-contrast: var(--color-text);
+  }
+  
+  [data-theme='hero'] {
+    --color-bg: #dde9ed;
+    --color-bg-contrast: #fff;
+    --color-link: #122947;
+  }
+  
+  [data-theme='linen'] {
+    --color-bg: var(--color-linen);
+    --color-bg-contrast: var(--color-white);
+    --color-text: var(--color-text);
+    --color-text-contrast: var(--color-text);
+  }
+  
+  [data-theme='irresistible'] {
+    --color-bg: #131517;
+    --color-bg-contrast: #fff;
+    --color-bg-contrast-low: #282828;
+    --color-text: #fff;
+    --color-text-contrast: #c48e48;
+    --color-cta-bg: #71513b;
+  }
+  
+  [data-theme='irresistible--orange'] {
+    --color-text-contrast: #f9b140;
+  }
+  
+  [data-theme='irresistible--vermilion'] {
+    --color-text-contrast: #e66525;
+  }
+  
+  [data-theme='irresistible--paprika'] {
+    --color-text-contrast: #bf3f18;
+  }
+  
+  [data-theme='irresistible--eton-blue'] {
+    --color-text-contrast: #80c9a3;
+  }
+  
+  [data-theme='irresistible--dodger-blue'] {
+    --color-text-contrast: #1e96ed;
+  }
+  
+  [data-theme='irresistible--lavender-grey'] {
+    --color-text-contrast: #c0c8d8;
+  }
+  
+  [data-theme='irresistible--african-violet'] {
+    --color-text-contrast: #b38ec4;
+  }
+  

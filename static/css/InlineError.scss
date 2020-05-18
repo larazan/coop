@@ -1,0 +1,16 @@
+.inline-error {
+  margin-top: var(--spacing-base--1-4);
+  margin-bottom: 0;
+
+  &--title {
+    font-size: var(--font-size);
+    font-weight: 700;
+    color: var(--color-invalid);
+    margin-top: 0;
+  }
+
+  &--content {
+    font-size: var(--font-size--small);
+    margin: 0;
+  }
+}

@@ -1,0 +1,38 @@
+.app-footer {
+  background-color: var(--color-grey-light);
+}
+
+.app-footer--links {
+  padding-top: var(--spacing-base--1-2);
+  padding-bottom: var(--spacing-base);
+  padding-left: var(--magic-spacing);
+  padding-right: var(--magic-spacing);
+}
+
+.app-footer--list {
+  font-size: var(--font-size);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &-item {
+    margin-top: var(--spacing-base--1-4);
+    margin-bottom: var(--spacing-base--1-4);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-text);
+    border: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.order-slot--wrapper {
+  + .app-footer--links {
+    padding-top: 0;
+  }
+}

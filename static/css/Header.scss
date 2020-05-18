@@ -1,0 +1,64 @@
+.header,
+.utility-header {
+  background-color: #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  &--container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: var(--magic-spacing);
+    padding-right: var(--magic-spacing);
+  }
+
+  &--logo {
+    display: block;
+    border: 0;
+    width: 2.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    &--img {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+.utility-header {
+  &--close {
+    display: flex;
+    align-items: center;
+    line-height: var(--type-base--line-height);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border: 0;
+    background-color: var(--color-grey-light);
+    border-radius: 64px;
+    font-size: 0.875rem;
+    color: var(--color-text);
+
+    &--label {
+      margin-right: 0.25rem;
+    }
+
+    &--icon {
+      display: block;
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      background-color: var(--color-button-dark);
+      color: var(--color-white);
+
+      svg {
+        fill: var(--color-white);
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import '../../styles/vars';
+
+.orange {
+  --color-alert-bg: #ff9d34;
+  --color-alert-squircle: #ffebe3;
+}
+
+.lemon {
+  --color-alert-bg: #f7d002;
+  --color-alert-squircle: #fffcee;
+}
+
+.container {
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  padding: 0 var(--magic-spacing);
+  background-color: var(--color-alert-bg);
+  color: var(--color-text);
+}
+
+.squircle {
+  display: block;
+  position: absolute;
+  content: '';
+  bottom: -4rem;
+  right: -4rem;
+  width: 720px;
+  height: 720px;
+  z-index: 0;
+
+  @media (min-width: $mq-large) {
+    bottom: -8.25rem;
+    right: -8.25rem;
+    width: 1280px;
+    height: 1280px;
+  }
+
+  path {
+    fill: var(--color-alert-squircle);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding-right: 1em;
+  font-size: var(--type-size--f5);
+
+  @media (min-width: $mq-large) {
+    padding-right: 4em;
+  }
+}
+
+.title {
+  font-size: var(--type-size--f4);
+  font-weight: 500;
+}

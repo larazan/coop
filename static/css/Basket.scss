@@ -1,0 +1,54 @@
+.basket {
+  background-color: var(--color-alt-grey);
+  grid-row: content;
+  width: 100%;
+  min-height: 100%;
+
+  &--items {
+    margin-top: var(--magic-spacing);
+  }
+
+  &--empty {
+    margin-top: var(--magic-spacing);
+    margin-bottom: var(--magic-spacing);
+  }
+
+  &--slots {
+    margin-top: var(--magic-spacing);
+    margin-bottom: var(--magic-spacing);
+  }
+
+  &--bottom {
+    padding-top: var(--magic-spacing);
+    padding-bottom: var(--magic-spacing);
+    padding-left: var(--magic-spacing);
+    padding-right: var(--magic-spacing);
+    background-color: var(--color-white);
+  }
+
+  &--messages {
+    display: flex;
+    margin-bottom: var(--spacing-base--1-2);
+
+    &--item {
+      display: flex;
+      flex: 1 0 0;
+      margin: 0;
+      font-size: var(--font-size--small);
+      font-weight: 500;
+      padding-right: var(--spacing-base--1-4);
+
+      svg {
+        flex: 0 0 auto;
+        fill: #f7b500;
+        display: inline-block;
+        vertical-align: bottom;
+        margin-right: var(--spacing-base--1-4);
+      }
+    }
+
+    + .basket--cta {
+      margin-top: var(--spacing-base--1-2);
+    }
+  }
+}

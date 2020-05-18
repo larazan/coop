@@ -1,0 +1,19 @@
+.order-slot {
+  display: grid;
+  grid: 1fr / auto-flow;
+  grid-column-gap: 0.5rem;
+
+  .infoblock-click,
+  .infoblock-edit {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+    width: 100%;
+  }
+}
+
+.order-slot--wrapper {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}

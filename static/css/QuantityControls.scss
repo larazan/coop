@@ -1,0 +1,63 @@
+:root {
+  --color-bg-contrast-low: var(--color-grey-light);
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: var(--color-bg-contrast-low) 0 1px 0 inset;
+}
+
+.quantity-display {
+  display: flex;
+  align-items: center;
+  flex: 1 0 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.125;
+  padding-left: 0.5rem;
+}
+
+.quantity-buttons {
+  display: flex;
+  flex: 0.5 0 0;
+  justify-content: flex-end;
+}
+
+.quantity-btn {
+  display: flex;
+  border: 0;
+  border-radius: var(--border-radius);
+  background-color: #00394e;
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: bold;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 1;
+  padding: 0.25rem;
+  justify-content: center;
+  align-items: center;
+
+  &.remove {
+    background-color: transparent;
+
+    svg {
+      fill: var(--color-red-mid);
+    }
+  }
+
+  svg {
+    display: block;
+    fill: var(--color-white);
+  }
+
+  &:disabled {
+    background-color: var(--btn-add-to-basket-color-disabled);
+
+    &:hover,
+    &:focus {
+      background-color: var(--btn-add-to-basket-color-disabled);
+    }
+  }
+}

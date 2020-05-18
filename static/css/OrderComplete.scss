@@ -1,0 +1,40 @@
+.order-complete--header {
+  background-color: #f2f4f7;
+  padding: 1rem;
+
+  .order-complete--order-detail {
+    p {
+      font-weight: 500;
+      margin-top: 0.125rem;
+    }
+  }
+}
+
+.order-complete--items-ordered {
+  padding: 1rem;
+}
+
+.order-complete--basket-item {
+  display: flex;
+
+  .basket-item--info {
+    padding-right: 0;
+  }
+
+  .basket-item--name {
+    margin-bottom: 0.125rem;
+    font-size: var(--font-size--small);
+  }
+
+  .basket-item--label {
+    margin-top: 0.125rem;
+  }
+
+  .basket-item--totals {
+    justify-content: flex-start;
+
+    span {
+      margin-right: 0.125rem;
+    }
+  }
+}

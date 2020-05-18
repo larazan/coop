@@ -1,0 +1,71 @@
+@import './vars';
+
+@mixin container {
+  // TODO: Replace magic numbers with proper vars
+  max-width: 34rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  @media (min-width: $mq-large) {
+    max-width: $mq-large;
+  }
+}
+
+@mixin side-padding-lg {
+  padding-left: var(--magic-spacing);
+  padding-right: var(--magic-spacing);
+}
+
+@mixin grid {
+  display: grid;
+  grid: auto-flow / 1fr 1fr;
+  grid-column-gap: var(--spacing-base--1-2);
+  grid-row-gap: var(--spacing-base--1-2);
+  padding-top: var(--spacing-base--1-2);
+  padding-bottom: var(--spacing-base--1-2);
+
+  @media screen and (min-width: $mq-large) {
+    grid: auto-flow / 1fr 1fr 1fr;
+    grid-column-gap: var(--magic-spacing);
+    grid-row-gap: var(--magic-spacing);
+    padding-top: var(--magic-spacing);
+    padding-bottom: var(--magic-spacing);
+  }
+
+  @media screen and (min-width: $mq-xlarge) {
+    grid: auto-flow / 1fr 1fr 1fr 1fr;
+  }
+}
+
+@mixin form-input {
+  display: block;
+  width: 100%;
+  appearance: none;
+  border: 1px solid var(--color-grey-dark);
+  border-radius: var(--border-radius);
+  box-shadow: inset rgba(0, 0, 0, 0.15) 0 1px 2px;
+  padding-left: calc(1.5 * var(--spacing-base--1-4));
+  padding-right: calc(1.5 * var(--spacing-base--1-4));
+  padding-top: var(--spacing-base--1-4);
+  padding-bottom: var(--spacing-base--1-4);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  line-height: 1.5;
+
+  &.invalid {
+    border-color: var(--color-invalid);
+  }
+
+  &:focus {
+    border-color: var(--color-grey-dark);
+  }
+}
+
+@mixin form-hint {
+  display: block;
+  line-height: 1.25;
+  font-size: var(--font-size--small);
+  margin-top: var(--spacing-base--1-8);
+  margin-bottom: var(--spacing-base--1-4);
+}

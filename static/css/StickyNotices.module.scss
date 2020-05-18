@@ -1,0 +1,7 @@
+.sticky-notices {
+  bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  position: sticky;
+  z-index: 9999;
+}

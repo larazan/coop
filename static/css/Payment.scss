@@ -1,0 +1,200 @@
+@import '../../styles/mixins';
+
+.payment {
+  @include container;
+  @include side-padding-lg;
+
+  width: 100%;
+}
+
+.payment-processing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #122947;
+  font-size: var(--type-size--f4);
+
+  svg {
+    margin-top: calc(var(--magic-spacing) * 4);
+  }
+
+  &--message {
+    padding-top: calc(var(--magic-spacing) + var(--spacing-base--1-4));
+    text-align: center;
+  }
+}
+
+.payment-details {
+  &--brands {
+    display: flex;
+  }
+
+  &--subtitle {
+    margin-top: var(--spacing-base--1-4);
+    margin-bottom: 0;
+  }
+
+  .card-brands {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+
+    li {
+      margin-top: var(--spacing-base--1-4);
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-left: var(--spacing-base--1-4);
+      }
+    }
+  }
+
+  .card-brands--icon {
+    display: block;
+  }
+}
+
+.wpwl-form {
+  margin-top: -0.5rem;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
+}
+
+.wpwl-group {
+  margin-top: calc(1.5 * var(--spacing-base--1-4));
+  margin-bottom: calc(1.5 * var(--spacing-base--1-4));
+
+  .wpwl-label {
+    display: block;
+    line-height: 1.5;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  .wpwl-control {
+    @include form-input;
+    padding-top: var(--spacing-base--1-8);
+    padding-bottom: var(--spacing-base--1-8);
+    font-size: var(--font-size);
+    font-family: monospace;
+    line-height: 2;
+    height: 44px;
+
+    &.wpwl-has-error {
+      color: var(--color-invalid);
+    }
+
+    // stylint-disable-next-line selector-class-pattern
+    &.wpwl-control-cardNumber,
+    &.wpwl-control-cvv {
+      padding-left: var(--spacing-base--1-8);
+      padding-right: var(--spacing-base--1-8);
+    }
+  }
+}
+
+.wpwl-group-submit {
+  border: 0;
+  margin-top: var(--spacing-base--1-2);
+  margin-bottom: var(--spacing-base);
+  text-align: center;
+}
+
+.wpwl-control-expiry,
+.wpwl-control-cvv {
+  max-width: 6rem;
+  margin-right: 0.5rem;
+}
+
+.wpwl-wrapper-cvv {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.wpwl-wrapper-submit {
+  text-align: center;
+}
+
+.wpwl-hint {
+  @include form-hint;
+}
+
+.wpwl-has-error + .wpwl-hint {
+  color: var(--color-invalid);
+}
+
+.wpwl-group-brand {
+  display: none;
+}
+
+.wpwl-wrapper-cvv {
+  .wpwl-icon {
+    display: none;
+  }
+
+  .wpwl-img {
+    display: none;
+  }
+
+  .wpwl-popover {
+    display: block;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    position: static;
+    line-height: 1.25;
+    font-size: 0.875rem;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    &-content {
+      margin-top: calc(-1 * var(--spacing-base--1-8));
+      margin-bottom: calc(1.5 * var(--spacing-base--1-4));
+    }
+  }
+
+  .wpwl-arrow {
+    display: none;
+  }
+}
+
+.wpwl-button-pay {
+  float: none;
+  width: 100%;
+  appearance: none;
+  display: inline-block;
+  border: 0;
+  color: var(--color-white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  line-height: 1.6;
+  vertical-align: bottom;
+  background-color: var(--color-button-primary);
+
+  &:hover,
+  &:active {
+    color: var(--color-white);
+    background-color: var(--color-button-primary--hover);
+  }
+
+  &:disabled {
+    color: var(--color-white);
+    background-color: var(--color-grey-mid);
+    box-shadow: none;
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-grey-mid);
+      box-shadow: none;
+    }
+  }
+}

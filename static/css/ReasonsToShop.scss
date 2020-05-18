@@ -1,0 +1,34 @@
+.reasons-to-shop {
+  padding-left: var(--magic-spacing);
+  padding-right: var(--magic-spacing);
+  margin-top: var(--spacing-base);
+  margin-bottom: var(--spacing-base);
+
+  > ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid: auto-flow / 1fr;
+    grid-row-gap: var(--magic-spacing);
+
+    > li:last-child {
+      grid-row: 2 / 4;
+    }
+
+    @media (min-width: 40em) {
+      display: grid;
+      grid: auto-flow / 1fr 1fr;
+      grid-column-gap: var(--magic-spacing);
+      grid-auto-rows: 16rem;
+    }
+
+    @media (min-width: 60em) {
+      grid: 1fr / 1fr 1fr 1fr;
+
+      > li:last-child {
+        grid-row: auto;
+      }
+    }
+  }
+}
